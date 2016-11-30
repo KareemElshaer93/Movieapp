@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.hp.movieapp.activities.DetailActivityFragment"
+
+    >
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:nestedScrollingEnabled="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="120dp"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Title"
+                    android:textSize="40dp"
+                    android:padding="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#33a175"
+                    android:textColor="#ffffff"
+                    android:id="@+id/tv_title" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iv_poster"
+                        android:scaleType="matrix"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Large Text"
+                            android:textSize="30dp"
+                            android:layout_marginBottom="20dp"
+                            android:id="@+id/tv_year" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Medium Text"
+                            android:layout_marginBottom="15dp"
+
+                            android:id="@+id/tv_rating" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Medium Text"
+
+                            android:id="@+id/tv_overView"
+                            />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:text="Mark as Favourite"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:background="@drawable/rec_shape"
+                            android:id="@+id/b_favorite" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="23dp">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/lv_trailers"
+                    android:nestedScrollingEnabled="true"
+                    />
+            </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="23dp">
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:id="@+id/lv_reviews"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="145dp"
+                android:nestedScrollingEnabled="true"
+
+          />
+        </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
